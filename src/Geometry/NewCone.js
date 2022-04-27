@@ -27,7 +27,7 @@ for (let i = 0; i < m; i++) {
 //criando a nossa geometria
 const geometry = new THREE.BufferGeometry().setFromPoints( points );
 //material
-const material = new THREE.PointsMaterial( {color: 0x00ff00, wireframe: true} );
+const material = new THREE.PointsMaterial( {color: 0x00ff00, wireframe: true, size: 0.02} );
 //nuvem de pontos
 const cloudCone = new THREE.Points( geometry, material );
 

@@ -10,29 +10,29 @@ import renderer from "./Components/Renderer";
 import light from "./Components/Lights";
 
 // import resize from "./Components/Resize";
+import { animate } from "./Components/animate";
 
 
+// //encorporar a geometrya
+// scene.add(cloud);
 
-//encorporar a geometrya
-scene.add(cloudBall);
+// //incorporar o elemento light
+// scene.add(light);
 
-//incorporar o elemento light
-scene.add(light);
+// //por padrão a posição é setada com zero, movemos o observador para o ponto z = 5
+// camera.position.z = 5
 
-//por padrão a posição é setada com zero, movemos o observador para o ponto z = 5
-camera.position.z = 5
+// //outra forma de setar a posição é utilizando o Vector3
+// // camera.position.set(1,2,5);
+// //lookAt -> Converte o vetor do espaço local deste objeto para o espaço mundial.
+// //camera.lookAt(box.position);
 
-//outra forma de setar a posição é utilizando o Vector3
-// camera.position.set(1,2,5);
-//lookAt -> Converte o vetor do espaço local deste objeto para o espaço mundial.
-//camera.lookAt(box.position);
-
-function animate() {
-	requestAnimationFrame( animate );
-  // cloud.geometry.rotateY(0.01);
-  cloudBall.geometry.rotateY(0.01);
-	renderer.render( scene, camera );
-}
+// function animate() {
+// 	requestAnimationFrame( animate );
+//   // cloud.geometry.rotateY(0.01);
+//   cloud.geometry.rotateY(0.01);
+// 	renderer.render( scene, camera );
+// }
 animate();
 // //incorporando o resize, redimensionar a figura de acordo com a tela
 // resize.start(renderer);
