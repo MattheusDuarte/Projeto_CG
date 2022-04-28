@@ -10,18 +10,18 @@ import light from "./Lights";
 
 
 //encorporar a geometrya
-scene.add(cloud);
+scene.add(cloudBall);
 
 //incorporar o elemento light
 scene.add(light);
 
 //por padrão a posição é setada com zero, movemos o observador para o ponto z = 5
-camera.position.z = 5
+camera.position.z = 5;
 
 function animate() {
 	requestAnimationFrame( animate );
   // cloud.geometry.rotateY(0.01);
-  cloud.geometry.rotateY(0.01);
+  cloudBall.geometry.rotateY(0.01);
 	renderer.render( scene, camera );
 }
 
