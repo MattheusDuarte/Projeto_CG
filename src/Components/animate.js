@@ -1,7 +1,18 @@
-import cloud from "../Geometry/NewGeometry";
-import cloudCylinder from "../Geometry/NewCylinder";
-import cloudCone from "../Geometry/NewCone";
-import cloudBall from "../Geometry/NewBall";
+import cloud from "../Geometry/NewGeometry";//plano
+import cloudCylinder from "../Geometry/NewCylinder";//cilindro
+import cloudCone from "../Geometry/NewCone";//cone
+import cloudBall from "../Geometry/NewBall";//bola
+
+//Exemplos 1
+import PrismaTriangle from "../Example/Figuras1/PrismTriangle";
+import PyramidTriangle from "../Example/Figuras1/PyramidTriangle";
+//Exemplos 2
+import PyramidTriangle2 from "../Example/Figuras2/PyramidTriangle2";
+import PrismaQuadrangular from "../Example/Figuras2/PrismQuadrangular";
+//Exemplos 3
+import PyramidTriangle3 from "../Example/Figuras3/PyramidTriangle3";
+import Paralelepipedo from "../Example/Figuras3/Paralelepipedo";
+
 
 import renderer from "./Renderer";
 import scene from "./Scene";
@@ -10,7 +21,8 @@ import light from "./Lights";
 
 
 //encorporar a geometrya
-scene.add(cloudBall);
+//MUDAR AQUIS
+scene.add(Paralelepipedo);
 
 //incorporar o elemento light
 scene.add(light);
@@ -20,8 +32,10 @@ camera.position.z = 5;
 
 function animate() {
 	requestAnimationFrame( animate );
-  // cloud.geometry.rotateY(0.01);
-  cloudBall.geometry.rotateY(0.01);
+  // MUDAR AQUI
+  Paralelepipedo.geometry.rotateX(0.01);
+  Paralelepipedo.geometry.rotateY(0.01);
+
 	renderer.render( scene, camera );
 }
 
